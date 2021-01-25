@@ -16,6 +16,8 @@
 		A019401525BF0E9600ACE5C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A019401425BF0E9600ACE5C1 /* Assets.xcassets */; };
 		A019401825BF0E9600ACE5C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A019401725BF0E9600ACE5C1 /* Preview Assets.xcassets */; };
 		A019401B25BF0E9600ACE5C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A019401925BF0E9600ACE5C1 /* LaunchScreen.storyboard */; };
+		A019402425BF11BA00ACE5C1 /* LicenseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019402325BF11BA00ACE5C1 /* LicenseManager.swift */; };
+		A019404725BF263000ACE5C1 /* Breach.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019404625BF263000ACE5C1 /* Breach.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		A019401725BF0E9600ACE5C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A019401A25BF0E9600ACE5C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A019401C25BF0E9600ACE5C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A019402325BF11BA00ACE5C1 /* LicenseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseManager.swift; sourceTree = "<group>"; };
+		A019404625BF263000ACE5C1 /* Breach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breach.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +98,10 @@
 		A0193FEE25BF0DEB00ACE5C1 /* MantisLib */ = {
 			isa = PBXGroup;
 			children = (
+				A019404525BF262600ACE5C1 /* Model */,
 				A0193FEF25BF0DEB00ACE5C1 /* MantisLib.h */,
 				A0193FF025BF0DEB00ACE5C1 /* Info.plist */,
+				A019402325BF11BA00ACE5C1 /* LicenseManager.swift */,
 			);
 			path = MantisLib;
 			sourceTree = "<group>";
@@ -129,6 +135,14 @@
 				A019401725BF0E9600ACE5C1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A019404525BF262600ACE5C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A019404625BF263000ACE5C1 /* Breach.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +223,7 @@
 				TargetAttributes = {
 					A0193FEB25BF0DEB00ACE5C1 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 					A0193FF425BF0DEB00ACE5C1 = {
 						CreatedOnToolsVersion = 12.3;
@@ -270,6 +285,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A019404725BF263000ACE5C1 /* Breach.swift in Sources */,
+				A019402425BF11BA00ACE5C1 /* LicenseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +455,7 @@
 		A019400125BF0DEB00ACE5C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 4A4UVHD5AZ;
@@ -454,6 +472,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lagm.MantisLib;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -462,6 +481,7 @@
 		A019400225BF0DEB00ACE5C1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 4A4UVHD5AZ;
@@ -486,6 +506,7 @@
 		A019400425BF0DEB00ACE5C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4A4UVHD5AZ;
 				INFOPLIST_FILE = MantisLibTests/Info.plist;
@@ -504,6 +525,7 @@
 		A019400525BF0DEB00ACE5C1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4A4UVHD5AZ;
 				INFOPLIST_FILE = MantisLibTests/Info.plist;

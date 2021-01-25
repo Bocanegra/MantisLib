@@ -10,17 +10,17 @@ import XCTest
 
 class MantisLibTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var licenseManager: LicenseManager!
+    
+    override func setUp() {
+        licenseManager = LicenseManager()
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
+    
     func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssertEqual(
+            licenseManager.add(a: 2, b: 3),
+            5
+        )
     }
 
     func testPerformanceExample() throws {
